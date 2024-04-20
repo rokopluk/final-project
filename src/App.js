@@ -8,7 +8,7 @@ import { useState } from 'react';
 function App() {
   const [myStandings, setMyStandings] = useState([]);
   async function getStandings() {
-    let { data: al_standings, error } = await supabase
+    let { data: al_standings } = await supabase
       .from('al_standings')
       .select('*')
     setMyStandings(al_standings);
@@ -17,7 +17,7 @@ function App() {
 
   const [mynlStandings, setMynlStandings] = useState([]);
   async function getnlStandings() {
-    let { data: nl_standings, error } = await supabase
+    let { data: nl_standings } = await supabase
       .from('nl_standings')
       .select('*')
     setMynlStandings(nl_standings);
