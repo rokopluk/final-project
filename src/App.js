@@ -3,6 +3,7 @@ import './App.css';
 import { supabase } from './supabaseClient'
 import { useState } from 'react';
 
+const toTop = () => window.scrollTo({top: 0, behavior: 'smooth'});
 
 
 function App() {
@@ -76,6 +77,7 @@ function App() {
   
         </table>
         <img src={logo} className="App-logo" alt="logo" />
+        <button onclick="toTop()">Back to Top</button>
         
       </header>
     </div>
